@@ -1,0 +1,170 @@
+import { StyleSheet, Dimensions } from 'react-native';
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
+} from 'react-native-responsive-screen';
+import { colors, fonts } from '../../constants';
+import {FontScale, ScreenScale} from "../../utils/CommonHelper";
+
+const height = Dimensions.get('screen').height;
+
+export default StyleSheet.create({
+  screen: {
+    flex: 1,
+    padding: '2%',
+    backgroundColor: 'white',
+    paddingBottom: ScreenScale(100),
+  },
+  headModalContainer: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.7)',
+  },
+  modalContainer: {
+    flex: 1,
+    height: hp('35%'),
+    backgroundColor: 'white',
+    marginTop: hp('65%'),
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20,
+    padding: '5%',
+  },
+  modalHeadText: {
+    fontWeight: '400',
+    fontSize: FontScale(20),
+    fontFamily: fonts.MEDIUM,
+    marginVertical: hp('2%'),
+    marginHorizontal: wp('2%'),
+  },
+  modalIconContainer: {
+    flexDirection: 'row',
+  },
+  iconText: {
+    fontWeight: '400',
+    fontSize: FontScale(12),
+    fontFamily: fonts.MEDIUM,
+    color: '#696969',
+    alignSelf: 'center',
+    marginVertical: hp('1%'),
+  },
+  modalIcon: {
+    height: 110,
+    width: 110,
+    borderColor: '#E9E6E6',
+    borderRadius: 13,
+    borderWidth: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: '2%',
+  },
+  header: {
+    paddingTop: hp('4%'),
+  },
+  headText: {
+    alignSelf: 'center',
+    fontWeight: '600',
+    fontSize: FontScale(26),
+    marginVertical: hp('1.5%'),
+    fontFamily: fonts.SEMIBOLD,
+  },
+  subText: {
+    textAlign: 'center',
+    color: colors.DOVE_GRAY,
+    fontWeight: '400',
+    fontSize: FontScale(24),
+    fontFamily: fonts.MEDIUM,
+  },
+  chooseText: {
+    textAlign: 'center',
+    color: colors.DOVE_GRAY,
+    fontWeight: '400',
+    fontSize: FontScale(20),
+    fontFamily: fonts.MEDIUM,
+    marginTop: hp('5%'),
+  },
+  seperator: {
+    width: '90%',
+    height: 1,
+    alignSelf: 'center',
+    backgroundColor: '#E9E6E6',
+    marginVertical: hp('4%'),
+  },
+  stepText: {
+    alignSelf: 'center',
+    color: '#C8C7C7',
+    fontWeight: '500',
+    fontSize: FontScale(14),
+    fontFamily: fonts.LIGHT,
+  },
+  camera: {
+    height: ScreenScale(170),
+    width: ScreenScale(170),
+    borderWidth: 0.5,
+    borderRadius: 100,
+    borderStyle: 'dashed',
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F9F9F9',
+    marginTop: hp('5%'),
+  },
+  iconCameraContainer: {
+    position: 'absolute',
+    height: ScreenScale(40),
+    width: ScreenScale(40),
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderRadius: 50,
+    backgroundColor: '#2B2E36',
+    right: 10,
+    bottom: 0,
+  },
+  icon: {
+    borderRadius: 100,
+    alignSelf: 'center',
+  },
+  nextBtn: {
+    marginVertical: hp('1%'),
+    backgroundColor: '#EAE9E9',
+    elevation: 2,
+  },
+  titleStyle: {
+    color: colors.BLACK,
+    fontSize: FontScale(18),
+    fontWeight: '500',
+    fontFamily: fonts.LIGHT,
+  },
+  input: {
+    borderColor: 'lightgrey',
+    borderWidth: 1,
+    height: ScreenScale(70),
+    marginTop: hp('2%'),
+    borderRadius: 30,
+    width: wp('90%'),
+    alignSelf: 'center',
+    paddingHorizontal: wp('6%'),
+  },
+  textInput: {
+    paddingHorizontal: 20,
+    fontWeight: '400',
+    fontSize: FontScale(18),
+    fontFamily: fonts.MEDIUM,
+  },
+  textInputContainer: {
+    // height: hp('15%'),
+  },
+  errorText: {
+    marginRight: wp('8%s'),
+    marginVertical: hp('1%'),
+    alignSelf: 'flex-end',
+    fontWeight: '500',
+    fontSize: 12,
+    color: 'red',
+  },
+  touchable: {
+    width:'100%',
+    justifyContent: 'center',
+    margin: '2%',
+  },
+});
